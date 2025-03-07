@@ -12,12 +12,19 @@ def collect_system_metrics():
     return metrics
 
 def save_metrics_to_file(metrics, filename='system_metrics.json'):
-    with open(filename, 'a') as f:
-        json.dump(metrics, f)
-        f.write('\n')
+    try:
+        with open(filename, 'a') as f:
+            json.dump(metrics, f)
+            f.write('\n')
+    except Exception as e:
+        print(f"Error saving metrics to file: {e}")
 
 if __name__ == "__main__":
     while True:
-        metrics = collect_system_metrics()
-        save_metrics_to_file(metrics)
-        time.sleep(5)
+        try:
+            metrics = collect_system_metrics()
+            save_metrics_to_file(metrics)
+            time.sleep(5)
+        except Exception as e:
+            print(f"Error collecting metrics: {e}")
+            time.sleep(5)
