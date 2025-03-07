@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Systems Health Monitoring</title>
+</head>
+<body>
+    <h1>Embedded Systems Health Monitoring</h1>
+    <h2>Real-time Metrics</h2>
+    <div id="metrics"></div>
+    <h2>Anomalies</h2>
+    <div id="anomalies"></div>
+    <h2>Failure Predictions</h2>
+    <div id="failure_predictions"></div>
+
+    <script>
+        async function fetchMetrics() {
+            const response = await fetch('/metrics');
+            const data = await response.json();
+            document.getElementById('metrics').innerText = JSON.stringify(data, null, 2);
+        }
+
+        async function fetchAnomalies() {
+            const response = await fetch('/anomalies');
+            const data = await response.json();
+            document.getElementById('anomalies').innerText = JSON.stringify(data, null, 2);
+        }
+
+        async function fetchFailurePredictions() {
+            const response = await fetch('/failure_predictions');
+            const data = await response.json();
+            document.getElementById('failure_predictions').innerText = JSON.stringify(data, null, 2);
+        }
+
+        fetchMetrics();
+        fetchAnomalies();
+        fetchFailurePredictions();
+    </script>
+</body>
+</html>
