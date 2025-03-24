@@ -10,10 +10,10 @@ This project is an Embedded Systems Health Monitoring Tool that uses AI to detec
 - Integration with existing diagnostic tools
 
 ## Technology Stack
-- **Languages:** Python, C++
-- **Libraries:** TensorFlow/Keras (for AI models), scikit-learn (for data processing), pandas (for data analysis)
-- **Tools:** Windbg (for debugging), git (for version control)
-- **Frameworks:** Flask (for the web interface), Celery (for task scheduling)
+- **Languages:** Python, HTML, CSS, JavaScript, ReactJS
+- **Libraries:** scikit-learn (for data processing), pandas (for data analysis)
+- **Tools:** git (for version control)
+- **Frameworks:** Flask (for the web interface)
 
 ## Project Structure
 ```plaintext
