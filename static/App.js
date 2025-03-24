@@ -22,7 +22,7 @@ function App() {
     setLoading(true);
     try {
       // Update the URL below to your deployed backend URL
-      const response = await axios.post('https://your-backend-url.vercel.app/generate_caption', formData, {
+      const response = await axios.post('https://embedded-systems-health-monitoring-fiyiap83y.vercel.app/', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
