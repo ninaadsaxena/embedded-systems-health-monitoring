@@ -13,7 +13,7 @@ def add_security_headers(response):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('App.js')
 
 @app.route('/metrics')
 def get_metrics():
