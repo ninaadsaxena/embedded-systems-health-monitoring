@@ -14,5 +14,5 @@ if __name__ == "__main__":
     df = pd.read_csv('processed_metrics.csv')
     model = train_anomaly_detector(df)
     anomalies = detect_anomalies(model, df)
-    anomalies.to_csv('anomalies.csv')
+    anomalies.to_csv('anomalies.csv', index=False)
     print(anomalies[anomalies['anomaly'] == -1])
