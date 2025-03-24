@@ -1,9 +1,11 @@
 import psutil
 import time
 import json
+from datetime import datetime
 
 def collect_system_metrics():
     metrics = {
+        'timestamp': datetime.now().isoformat(),
         'cpu_usage': psutil.cpu_percent(interval=1),
         'memory_usage': psutil.virtual_memory().percent,
         'disk_usage': psutil.disk_usage('/').percent,
