@@ -2,6 +2,7 @@ from sklearn.linear_model import LinearRegression
 import pandas as pd
 
 def train_predictive_model(df):
+    df['failure'] = 0  # Example: Adding a default 'failure' column if missing
     X = df[['cpu_usage', 'memory_usage', 'disk_usage']]
     y = df['failure']
     model = LinearRegression()
