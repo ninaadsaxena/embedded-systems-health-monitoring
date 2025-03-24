@@ -1,7 +1,7 @@
 # Embedded Systems Health Monitoring Tool
 
 ## Description
-This project is an Embedded Systems Health Monitoring Tool that uses AI to detect and diagnose issues in real-time. It analyzes system logs, performance metrics, and sensor data to identify anomalies and predict failures.
+This project is an Embedded Systems Health Monitoring Tool that uses AI to detect and diagnose issues in real-time. It analyzes system logs, performance metrics, and sensor data to identify anomalies and suggest predictive maintenance actions.
 
 ## Key Features
 - Real-time monitoring and alerting
@@ -16,12 +16,29 @@ This project is an Embedded Systems Health Monitoring Tool that uses AI to detec
 - **Frameworks:** Flask (for the web interface), Celery (for task scheduling)
 
 ## Project Structure
+```plaintext
+/project-root
+  /static
+    App.css
+    App.js
+  /templates
+    index.html
+  app.py
+  anomaly_detection.py
+  data_collection.py
+  data_processing.py
+  README.md
+  LICENSE
+  requirements.txt
+  vercel.json
+```
 - `data_collection.py`: Collects system metrics and saves them to a file.
 - `data_processing.py`: Loads and processes the collected metrics.
 - `anomaly_detection.py`: Detects anomalies in the processed metrics.
 - `predictive_maintenance.py`: Predicts potential failures and suggests maintenance actions.
 - `app.py`: Flask web server to display metrics, anomalies, and failure predictions.
-- `templates/index.html`: HTML template for the web interface.
+- `static/`: Static files like CSS and JavaScript.
+- `templates/`: HTML templates for the web interface.
 - `README.md`: Project documentation.
 
 ## Installation
